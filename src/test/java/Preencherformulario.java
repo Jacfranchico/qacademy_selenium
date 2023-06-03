@@ -22,6 +22,7 @@ public class Preencherformulario {
 
     String inserirSenha = "//*[@id='firstpassword']";
     String confirmarSenha = "//*[@id='secondpassword']";
+    String refreshNaPagina = "//*[@id='Button1']";
 
    
 
@@ -61,6 +62,9 @@ public class Preencherformulario {
         driver.findElement(By.xpath(confirmarSenha)).click();
         driver.findElement(By.xpath(confirmarSenha)).sendKeys("123456");
         driver.findElement(By.xpath(confirmarSenha)).click();
+
+        Thread.sleep(7000);
+        driver.findElement(By.xpath(refreshNaPagina)).click();
 
     }
 }
